@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'LXGW WenKai Mono TC';
+    src: url('/res/LXGWWenKaiMonoTC-Regular.ttf');
+}
+@font-face {
+    font-family: 'LXGW WenKai TC';
+    src: url('/res/LXGWWenKaiTC-Regular.ttf');
+}
+html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'LXGW WenKai TC', 'Courier New', Courier, monospace;
+}
+a, a:link, a:hover, a:active a:visited {
+    text-decoration: none;
+    color: #add8e6;
+}
+a:hover {
+    text-shadow: 0 0 5px #add8e6;
+}
+#page {
+    background-color: #222;
+    width: 600px;
+    height: max-content;
+    margin: 0 auto;
+    padding: 0;
+}
+#head, #body, #foot {
+    padding: 0 8px;
+}
+#head {
+    text-align: center;
+}
+#nav {
+    width: 120px;
+    float: left;
+    margin: 0 0 auto 0;
+    padding: 4px;
+    padding-right: 18px;
+}
+#nav ul {
+    padding: 0;
+}
+#nav ul li {
+    list-style: none;
+}
+#main {
+    width: 440px;
+    float: none;
+    padding: 4px;
+    margin: 0 0 0 auto
+}
+#foot p {
+    float: unset;
+    text-align: center;
+    font-size: x-small;
+}
