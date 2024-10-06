@@ -1,63 +1,98 @@
 @font-face {
-    font-family: 'LXGW WenKai Mono TC';
-    src: url('/res/LXGWWenKaiMonoTC-Regular.ttf');
+  font-family: kai;
+  src: url('/res/font/LXGWWenKaiTC-Regular.ttf');
 }
+
 @font-face {
-    font-family: 'LXGW WenKai TC';
-    src: url('/res/LXGWWenKaiTC-Regular.ttf');
+  font-family: kai-mono;
+  src: url('/res/font/LXGWWenKaiMonoTC-Regular.ttf');
 }
-html {
-    margin: 0;
-    padding: 0;
+
+:root {
+  font-size: (100% / 120);
 }
+
 body {
-    background-color: black;
-    color: white;
-    margin: 0;
-    padding: 0;
-    font-family: 'LXGW WenKai TC', 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+  /* height: 100vh; */
+  overflow: scroll;
+  background-image: url('/res/img/117838045_p0.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: kai;
 }
-a, a:link, a:hover, a:active a:visited {
-    text-decoration: none;
-    color: #add8e6;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: .5rem 0;
+  margin: 0;
 }
-a:hover {
-    text-shadow: 0 0 5px #add8e6;
+
+a:hover,
+a:focus,
+a:active {
+  text-shadow: 0 0 1rem #add8e6;
 }
-#page {
-    background-color: #222;
-    width: 600px;
-    height: max-content;
-    margin: 0 auto;
-    padding: 0;
+
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  color: #add8e6;
+  text-decoration: none;
 }
-#head, #body, #foot {
-    padding: 0 8px;
+
+hr {
+  box-shadow: 0 0 1rem #add8e6;
+  /* border: none; */
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #add8e6;
+  color: #00000000;
 }
-#head {
-    text-align: center;
+
+.linklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
+
+#body {
+  width: 87%;
+  margin: 0 auto;
+  padding: 1rem;
+  color: white;
+}
+
+#body tr td {
+  background-color: #1f1e33aa;
+  backdrop-filter: blur(16px);
+  border-radius: 6px;
+  padding: 1rem;
+}
+
 #nav {
-    width: 120px;
-    float: left;
-    margin: 0 0 auto 0;
-    padding: 4px;
-    padding-right: 18px;
+  width: 24%;
+  vertical-align: top;
 }
-#nav ul {
-    padding: 0;
-}
-#nav ul li {
-    list-style: none;
-}
+
 #main {
-    width: 440px;
-    float: none;
-    padding: 4px;
-    margin: 0 0 0 auto
+  vertical-align: top;
 }
-#foot p {
-    float: unset;
-    text-align: center;
-    font-size: x-small;
+
+#footer {
+  text-align: center;
+  font-size: smaller;
+  vertical-align: middle;
+  text-align: center;
 }
