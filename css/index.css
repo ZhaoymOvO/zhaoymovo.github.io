@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: kai;
   src: url('/res/font/LXGWWenKaiTC-Regular.ttf');
 }
@@ -6,7 +6,7 @@
 @font-face {
   font-family: kai-mono;
   src: url('/res/font/LXGWWenKaiMonoTC-Regular.ttf');
-}
+} */
 
 :root {
   font-size: (100% / 120);
@@ -24,7 +24,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  font-family: kai;
+  /* font-family: kai; */
 }
 
 h1,
