@@ -17,6 +17,7 @@ body {
   padding: 0;
   /* height: 100vh; */
   min-height: 100vh;
+  width: 100vw;
   overflow: scroll;
   background-image: url('/res/img/117838045_p0.jpg');
   background-repeat: no-repeat;
