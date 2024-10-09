@@ -2,6 +2,14 @@
   font-size: (100% / 120);
 }
 
+pre,
+code {
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 8px;
+  background-color: #000000;
+  padding: 0 .25em;
+}
+
 body {
   margin: 0;
   padding: 0;
