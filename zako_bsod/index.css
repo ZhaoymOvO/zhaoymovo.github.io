@@ -1,0 +1,56 @@
+@font-face {
+    font-family: kfp;
+    src: url('./KosefontP-JP.ttf');
+}
+
+:root body {
+    font-size: calc(100vw / 120);
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    /* background-color: #0078d7; */
+    background-color: #246f24;
+    /* background-color: black; */
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    vertical-align: middle;
+    color: white;
+    font-family: kfp;
+}
+
+#main {
+    margin: 0 auto;
+    width: 60%;
+    height: 50vh;
+    padding: 25vh 0;
+    vertical-align: middle;
+}
+#title {
+    font-size: 8rem;
+    margin-top: 5vh;
+}
+#text {
+    font-size: 2rem;
+    padding: 2rem 0;
+}
+#process {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+}
+#qrNsup {
+    display: flex;
+}
+#sup {
+    padding-left: 2rem;
+    font-size: 1rem;
+}
+#supT {
+    vertical-align: top;
+}
+#supB {
+    margin-top: 1rem;
+    vertical-align: bottom;
+}
