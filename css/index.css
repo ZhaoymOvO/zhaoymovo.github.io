@@ -1,3 +1,8 @@
+@font-face {
+  font-family: '975Maru';
+  src: url('/res/font/975MaruSC-Regular.ttf');
+}
+
 :root {
   font-size: (100% / 120);
 }
@@ -11,6 +16,7 @@ code {
 }
 
 body {
+  font-family: '975Maru';
   margin: 0;
   padding: 0;
   min-height: 100vh;
