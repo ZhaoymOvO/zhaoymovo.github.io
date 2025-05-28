@@ -19,7 +19,7 @@ body {
   font-family: '975Maru';
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  min-height: calc(100vh - 2rem);
   width: 100%;
   background-image: url('/res/img/117838045_p0.jpg');
   background-repeat: no-repeat;
@@ -72,14 +72,20 @@ hr {
 
 #body {
   width: 87%;
-  margin: 0 auto;
+  /* width: 100%; */
+  min-width: 800px;
+  margin: 1rem auto;
   padding: 1rem;
   color: white;
+  border-collapse: collapse;
+  background-color: #1f1e33aa;
+  backdrop-filter: blur(16px);
+  border-radius: 1rem;
 }
 
 #body tr td {
-  background-color: #1f1e33aa;
-  backdrop-filter: blur(16px);
+  /* background-color: #1f1e33aa; */
+  /* backdrop-filter: blur(16px); */
   border-radius: 6px;
   padding: 1rem;
 }
@@ -87,13 +93,17 @@ hr {
 #nav {
   width: 24%;
   vertical-align: top;
+  border-right: #add8e6 solid 1px;
+  border-top: #add8e6 solid 1px;
 }
 
 #main {
   vertical-align: top;
+  border-top: #add8e6 solid 1px;
 }
 
 #footer {
+  border-top: #add8e6 solid 1px;
   text-align: center;
   font-size: smaller;
   vertical-align: middle;
