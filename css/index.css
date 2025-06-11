@@ -93,17 +93,19 @@ hr {
 #nav {
   width: 24%;
   vertical-align: top;
-  border-right: #add8e6 solid 1px;
-  border-top: #add8e6 solid 1px;
+  /* border-right: #add8e6 solid 1px;
+  border-top: #add8e6 solid 1px; */
+  border-right: #1f1e33 solid 2px;
+  border-top: #1f1e33 solid 2px;
 }
 
 #main {
   vertical-align: top;
-  border-top: #add8e6 solid 1px;
+  border-top: #1f1e33 solid 2px;
 }
 
 #footer {
-  border-top: #add8e6 solid 1px;
+  border-top: #1f1e33 solid 2px;
   text-align: center;
   font-size: smaller;
   vertical-align: middle;
