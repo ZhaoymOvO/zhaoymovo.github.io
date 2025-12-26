@@ -14,18 +14,25 @@
   
 
   
-  <title>归档: 2025 | </title>
+  <title>Why Wayland sucked? | </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-  <meta property="og:type" content="website">
-<meta property="og:title">
-<meta property="og:url" content="http://example.com/archives/2025/index.html">
+  <meta name="description" content="我曾經多次在公開場合拒絕使用Waylandand that’s why: Y  好了，是時候認證講講爲什麼了 很多人講啊你現在是不是要開始給那個不知道多少年沒更新的X11辯護了恭喜你答對了我們來講講爲什麼我認爲Wayland的開發理念必然做不好圖形化界面 很多Linux Desktop用戶都沒有搞明白的一點是，desktop client os面向的對象根本不在意什麼開源什麼模塊化大家需要的只有o">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Why Wayland sucked?">
+<meta property="og:url" content="http://example.com/2025/12/26/why-wayland-sucked/index.html">
 <meta property="og:site_name">
+<meta property="og:description" content="我曾經多次在公開場合拒絕使用Waylandand that’s why: Y  好了，是時候認證講講爲什麼了 很多人講啊你現在是不是要開始給那個不知道多少年沒更新的X11辯護了恭喜你答對了我們來講講爲什麼我認爲Wayland的開發理念必然做不好圖形化界面 很多Linux Desktop用戶都沒有搞明白的一點是，desktop client os面向的對象根本不在意什麼開源什麼模塊化大家需要的只有o">
 <meta property="og:locale">
+<meta property="article:published_time" content="2025-12-26T08:09:54.000Z">
+<meta property="article:modified_time" content="2025-12-26T08:50:29.605Z">
 <meta property="article:author" content="ZhaoymOvO">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="GUI">
+<meta property="article:tag" content="Desktop">
 <meta name="twitter:card" content="summary">
   
   
@@ -161,63 +168,101 @@
     <div id="content-body">
        
 
-<div class="archive-main-card">
-    <div class="archive-top">
-      <div class="main-title-bar">
-        <div class="main-title-dot"></div>
-        <h1 class="article-title">归档</h1>
-      </div>    
+
+<article id="post-why-wayland-sucked" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+    
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 class="p-name article-title" itemprop="headline name">
+        Why Wayland sucked?
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-12-26T08:09:54.000Z" itemprop="datePublished">2025-12-26</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/Computer/">Computer</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            923 词 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Desktop/" rel="tag">Desktop</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GUI/" rel="tag">GUI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <p>我曾經多次在公開場合拒絕使用Wayland<br>and that’s why: <em><strong>Y</strong></em></p>
+<hr>
+<p>好了，是時候認證講講爲什麼了</p>
+<p>很多人講啊你現在是不是要開始給那個不知道多少年沒更新的X11辯護了<br>恭喜你答對了<br>我們來講講爲什麼我認爲Wayland的開發理念必然做不好圖形化界面</p>
+<p>很多Linux Desktop用戶都沒有搞明白的一點是，desktop client os面向的對象根本不在意什麼開源什麼模塊化<br>大家需要的只有oob之後可以直接ready to go，需要的是一架買來可以直接用的車，而不是可以拆卸替換每一個組件的車<br>這點和do one thing and do it well的UNIX哲學是衝突的，或者說，你得有人想辦法給這一切串起來</p>
+<p>Wayland遵循的就是do one thing and do it well的UNIX哲學<br>我只負責給畫面送上屏幕，其他的compositor也好shell也罷自己解決問題吧<br>最後的結果是怎樣？結果是同樣的軟件在GNOME下在Plasma下，甚至同樣的desktop environment但是不同的compositor配置下的表現都完全不同<br>相信我，體驗的不統一是Linux desktop不能普及的最大阻礙</p>
+<p>而反觀我們的good old X11呢？<br>X11針對你能想到的大部分工作都提供了接口，輸入處理、窗口合成、熒幕管理，通通都是X11在處理<br>對於X11而言，再怎麼差異化的硬件下軟體的表現也是類似的，大家只要對接好X11的接口就OK了</p>
+<p>Desktop experience本就是高度整合的場景，用戶需要的不是每一個零件可以自由的組裝，用戶需要的是整體用起來沒有割裂感<br>Wayland的do one thing and do it well的設計理念，增加了桌面體驗的整合成本，最終轉嫁到下游開發者（desktop environmen, compositor, shell, display manager, …）、發行版和用戶頭上</p>
+<p>是，現在的大家已經在爲了Wayland的體驗在整合下游的protocol了<br>但是對於一個大家滿腦子都是自己代碼寫爽，出一個整合度比較高的systemd都能被炎上的社區，這種融合很顯然是道阻且長的（且不知道會不會被Wayland自己背刺）</p>
+<p><em>X.org沒有未來，而Wayland只有未來</em></p>
+
+        
+      </div>
+
+         
     </div>
     
-    
-      
-      
-        
-        <div class="year-line">
-            <div class="year-num">2025</div>
-            <div class="dot-wrapper">
-                <div class="dot"></div>
-            </div>
-            <div class="article-count">2 篇文章</div>
-        </div>
-      
-      <a class="archive-article-link" href="/2025/12/26/why-wayland-sucked/" title="Why Wayland sucked?">
-        <div class="date">12-26</div>
-        <div class="line">
-            <div class="dot"></div>
-        </div>
-        <div class="title">
-            <div class="title-inner">
-                
-                    Why Wayland sucked?
-                
-            </div>
-        </div>
-        <div class="tags">
-            #Linux #GUI #Desktop
-        </div>
-      </a>
-    
-      
-      
-      <a class="archive-article-link" href="/2025/12/26/hello-world/" title="Hello World">
-        <div class="date">12-26</div>
-        <div class="line">
-            <div class="dot"></div>
-        </div>
-        <div class="title">
-            <div class="title-inner">
-                
-                    Hello World
-                
-            </div>
-        </div>
-        <div class="tags">
-            
-        </div>
-      </a>
-    
+     
   </div>
+  
+    
+<nav id="article-nav">
+  <a class="article-nav-btn left  disabled "
+     >
+    <i class="fa-solid fa-angle-left"></i>
+    <p class="title-text">
+        
+    </p>
+  </a>
+  <a class="article-nav-btn right "
+    
+      href="/2025/12/26/hello-world/"
+      title="Hello World"
+     >
+
+    <p class="title-text">
+      
+        Hello World
+        
+    </p>
+    <i class="fa-solid fa-angle-right"></i>
+  </a>
+</nav>
+
+
+  
+</article>
+
+
+
+
+
+
     </div>
     <div id="footer-wrapper">
       <footer id="footer">
