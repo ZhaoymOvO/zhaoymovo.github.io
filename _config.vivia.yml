@@ -2,6 +2,7 @@
 menu:                      # Links in the navigation bar
   Home: /
   Archives: /archives
+  # Categories: /categories
   About: /about
 # rss: /atom.xml
 
