@@ -36,7 +36,7 @@ date: 1970-01-01 00:00:00
 </style>
 <div class="Valhalla">
 <div class="card">
-    <div class="name">Suzuki Rika</div>
+    <div class="name">ZhaoymOvO</div>
     <div class="signature">“Narcissus„</div>
     <a href="http://github.com/ZhaoymOvO"><img src="https://avatars.githubusercontent.com/u/109097598?v=4" alt="GitHub" class="avatar"></a>
 </div>
