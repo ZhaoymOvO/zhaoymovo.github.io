@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+
+
+<html theme="dark" showBanner="true" hasBanner="false" > 
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet">
+<script src="/js/color.global.min.js" ></script>
+<script src="/js/load-settings.js" ></script>
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+
+  
+  <title>ICMP | </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+  <meta name="description" content="ICMPv4ICMPv4 是 IPv4 協議簇中負責傳遞控制訊息和錯誤報告的核心機制。雖然它封裝在 IP 報文中，但它被視為 Network Layer 的一部分。 報文結構123456789 0                   1                   2                   3 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ICMP">
+<meta property="og:url" content="http://example.com/2026/01/31/ICMP/index.html">
+<meta property="og:site_name">
+<meta property="og:description" content="ICMPv4ICMPv4 是 IPv4 協議簇中負責傳遞控制訊息和錯誤報告的核心機制。雖然它封裝在 IP 報文中，但它被視為 Network Layer 的一部分。 報文結構123456789 0                   1                   2                   3 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0">
+<meta property="og:locale">
+<meta property="article:published_time" content="2026-01-31T12:39:45.000Z">
+<meta property="article:modified_time" content="2026-01-31T19:27:35.472Z">
+<meta property="article:author" content="ZhaoymOvO">
+<meta property="article:tag" content="Network">
+<meta property="article:tag" content="IPv6">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-32.png" sizes="32x32">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-128.png" sizes="128x128">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-180.png" sizes="180x180">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-192.png" sizes="192x192">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-32.png" sizes="32x32">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-128.png" sizes="128x128">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-180.png" sizes="180x180">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-192.png" sizes="192x192">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  
+   
+  <div id="main-grid" class="  ">
+    <div id="nav" class=""  >
+      <navbar id="navbar">
+  <nav id="title-nav">
+    <a href="/">
+      <div id="vivia-logo">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div> </div>
+    </a>
+  </nav>
+  <nav id="main-nav">
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+      <a class="main-nav-link" href="/about">About</a>
+    
+      <a class="main-nav-link" href="/links">Links</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    <a id="theme-btn" class="nav-icon">
+      <span class="light-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M438.5-829.913v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-829.913Zm0 747.826v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-82.087ZM877.913-438.5h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537t29.476-12.174h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T877.913-438.5Zm-747.826 0h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T82.087-521.5h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T130.087-438.5Zm660.174-290.87-34.239 32q-12.913 12.674-29.565 12.174-16.653-.5-29.327-13.174-12.674-12.673-12.554-28.826.12-16.152 12.794-28.826l33-35q12.913-12.674 30.454-12.674t30.163 12.847q12.709 12.846 12.328 30.826-.38 17.98-13.054 30.653ZM262.63-203.978l-32 34q-12.913 12.674-30.454 12.674t-30.163-12.847q-12.709-12.846-12.328-30.826.38-17.98 13.054-30.653l33.239-31q12.913-12.674 29.565-12.174 16.653.5 29.327 13.174 12.674 12.673 12.554 28.826-.12 16.152-12.794 28.826Zm466.74 33.239-32-33.239q-12.674-12.913-12.174-29.565.5-16.653 13.174-29.327 12.673-12.674 28.826-13.054 16.152-.38 28.826 12.294l35 33q12.674 12.913 12.674 30.454t-12.847 30.163q-12.846 12.709-30.826 12.328-17.98-.38-30.653-13.054ZM203.978-697.37l-34-33q-12.674-12.913-13.174-29.945-.5-17.033 12.174-29.707t31.326-13.293q18.653-.62 31.326 13.054l32 34.239q11.674 12.913 11.174 29.565-.5 16.653-13.174 29.327-12.673 12.674-28.826 12.554-16.152-.12-28.826-12.794ZM480-240q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm-.247-82q65.703 0 111.475-46.272Q637-414.544 637-480.247t-45.525-111.228Q545.95-637 480.247-637t-111.475 45.525Q323-545.95 323-480.247t45.525 111.975Q414.05-322 479.753-322ZM481-481Z"/></svg></span>
+      <span class="dark-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M480.239-116.413q-152.63 0-258.228-105.478Q116.413-327.37 116.413-480q0-130.935 77.739-227.435t206.304-125.043q43.022-9.631 63.87 10.869t3.478 62.805q-8.891 22.043-14.315 44.463-5.424 22.42-5.424 46.689 0 91.694 64.326 155.879 64.325 64.186 156.218 64.186 24.369 0 46.978-4.946 22.609-4.945 44.413-14.076 42.826-17.369 62.967 1.142 20.142 18.511 10.511 61.054Q807.174-280 712.63-198.206q-94.543 81.793-232.391 81.793Zm0-95q79.783 0 143.337-40.217 63.554-40.218 95.793-108.283-15.608 4.044-31.097 5.326-15.49 1.283-31.859.805-123.706-4.066-210.777-90.539-87.071-86.473-91.614-212.092-.24-16.369.923-31.978 1.164-15.609 5.446-30.978-67.826 32.478-108.282 96.152Q211.652-559.543 211.652-480q0 111.929 78.329 190.258 78.329 78.329 190.258 78.329ZM466.13-465.891Z"/></svg></span>
+    </a>
+    
+    <div id="nav-menu-btn" class="nav-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M177.37-252.282q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Zm0-186.218q-17.453 0-29.477-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T177.37-521.5h605.26q17.453 0 29.477 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T782.63-438.5H177.37Zm0-186.217q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Z"/></svg>
+    </div>
+  </nav>
+</navbar>
+<div id="nav-dropdown" class="hidden">
+  <div id="dropdown-link-list">
+    
+      <a class="nav-dropdown-link" href="/">Home</a>
+    
+      <a class="nav-dropdown-link" href="/archives">Archives</a>
+    
+      <a class="nav-dropdown-link" href="/about">About</a>
+    
+      <a class="nav-dropdown-link" href="/links">Links</a>
+    
+     
+    </div>
+</div>
+<script>
+  let dropdownBtn = document.getElementById("nav-menu-btn");
+  let dropdownEle = document.getElementById("nav-dropdown");
+  dropdownBtn.onclick = function() {
+    dropdownEle.classList.toggle("hidden");
+  }
+</script>
+    </div>
+    <div id="sidebar-wrapper">
+      <sidebar id="sidebar">
+  
+    <div class="widget-wrap">
+  <div class="info-card">
+    <div class="avatar">
+      
+        <image src=/image/avater.jpg></image>
+      
+      <div class="img-dim"></div>
+    </div>
+    <div class="info">
+      <div class="username">ZhaoymOvO </div>
+      <div class="dot"></div>
+      <div class="subtitle">“Narcissus„ </div>
+      <div class="link-list">
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://github.com/ZhaoymOvO" title="GitHub"><i class="fa-brands fa-github-alt"></i></a>
+         
+      </div>  
+    </div>
+  </div>
+</div>
+
+  
+  <div class="sticky">
+    
+      
+
+
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">分类</h3>
+      <div class="category-box">
+            <a class="category-link" href="/categories/Thoughts/">
+                Thoughts
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/categories/Computer/">
+                Computer
+                <div class="category-count">2</div>
+            </a>
+        </div>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">标签</h3>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Desktop/" rel="tag">Desktop</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/GUI/" rel="tag">GUI</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/IPv6/" rel="tag">IPv6</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Network/" rel="tag">Network</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Thoughts/" rel="tag">Thoughts</a></li></ul>
+    </div>
+  </div>
+
+
+    
+  </div>
+</sidebar>
+    </div>
+    <div id="content-body">
+       
+
+
+<article id="post-ICMP" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+    
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 class="p-name article-title" itemprop="headline name">
+        ICMP
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2026-01-31T12:39:45.000Z" itemprop="datePublished">2026-01-31</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/Computer/">Computer</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            6.9k 词 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IPv6/" rel="tag">IPv6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Network/" rel="tag">Network</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <h2 id="ICMPv4"><a href="#ICMPv4" class="headerlink" title="ICMPv4"></a>ICMPv4</h2><p>ICMPv4 是 IPv4 協議簇中負責傳遞控制訊息和錯誤報告的核心機制。雖然它封裝在 IP 報文中，但它被視為 Network Layer 的一部分。</p>
+<h3 id="報文結構"><a href="#報文結構" class="headerlink" title="報文結構"></a>報文結構</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> 0                   1                   2                   3</span><br><span class="line"> 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1</span><br><span class="line">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br><span class="line">|      Type     |      Code     |           Checksum            |</span><br><span class="line">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br><span class="line">|                        Rest of Header                         |</span><br><span class="line">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br><span class="line">|                         Data Payload                          |</span><br><span class="line">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>Type (8 bits)</strong>: 定義報文的大類（如錯誤報告或查詢）</li>
+<li><strong>Code (8 bits)</strong>: 提供Type的具體上下文（如「目的不可達」的具體原因）<ul>
+<li>e.g.<ul>
+<li><strong>Type 3</strong>: Destination Unreachable</li>
+<li><strong>Code 4</strong>: Fragmentation Needed and Don’t Fragment set</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Checksum (16 bits)</strong>: 使用One’s Complement算法，覆蓋整個ICMP報文（Header + Data）</li>
+<li><strong>Rest of Header (32 bits)</strong>: 內容取決於Type&#x2F;Code</li>
+<li><strong>Data Payload</strong></li>
+</ul>
+<h3 id="報文分類"><a href="#報文分類" class="headerlink" title="報文分類"></a>報文分類</h3><p>ICMPv4訊息可以分爲兩大類: <strong>差錯報告</strong> 和 <strong>查詢</strong></p>
+<ul>
+<li><strong>差錯報告 (Error Message)</strong>:<br>此類報文用於反饋網路層傳輸中的異常，<strong>絕對不會對「差錯報告報文」再生成差錯報告</strong>（防止廣播風暴）<ul>
+<li><strong>終點不可達 (Destination Unreachable, Type 3)</strong>:<br>當Router或Host無法交付數據包時發送，原因通過Code區分: 網路不可達、主機不可達、協定不可達或埠不可達<br><em>現代防火牆經常過濾這些回顯，導致traceroute在互聯網上呈現 <code>* * *</code> 的狀態</em><ul>
+<li>Code 0&#x2F;1 網絡&#x2F;主機不可達（路由表缺失或ARP失敗）</li>
+<li>Code 3 埠不可達（目標主機無進程偵聽該TCP&#x2F;UDP埠）</li>
+<li>Code 4 Fragmentation Needed and DF set<br>這是PMTUD (Path MTU Discovery)的基礎，Router丟棄大於MTU且DF&#x3D;1的包，並回傳此報文及Next-Hop MTU</li>
+</ul>
+</li>
+<li><strong>原點抑制 (Source Quench, Type 4)</strong>:<br><em>此報文已基本廢棄，參見RFC 6633</em></li>
+<li><strong>重定向 (Redirect, Type 5)</strong>:<br>Router通知Host對於目標地址，有更優的next hop路徑，常見於多Gateway局域網</li>
+<li><strong>超時 (Time Exceeded, Type 11)</strong>:<ul>
+<li><strong>Code 0</strong>: TTL在傳輸過程中減至0，Router丟棄數據包並通知源主機</li>
+<li><strong>Code 1</strong>: 分片重組超時</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>查詢 (Query Message)</strong><ul>
+<li><strong>回送請求&#x2F;回答 (Echo Request&#x2F;Reply, Type 8&#x2F;0)</strong>:<br>ping工具的基礎，用於測試目標可達性及測量往返延遲 (RTT)</li>
+<li><strong>時間戳請求&#x2F;回答 (Timestamp Request&#x2F;Reply, Type 13&#x2F;14)</strong>:<br><em>在現代網路架構中被NTP取代</em><br><em>出於安全考慮（防止指紋識別、正常運行時間推斷等），現代防火牆和操作系統默認幾乎都會Drop掉這類報文</em></li>
+</ul>
+</li>
+</ul>
+<h4 id="ICMP-Echo-Request-Reply-Type-8-0-報文結構"><a href="#ICMP-Echo-Request-Reply-Type-8-0-報文結構" class="headerlink" title="ICMP Echo Request&#x2F;Reply Type 8&#x2F;0 報文結構"></a>ICMP Echo Request&#x2F;Reply Type 8&#x2F;0 報文結構</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> 0                   1                   2                   3</span><br><span class="line"> 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1</span><br><span class="line">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br><span class="line">|  Type (8/0)   |    Code (0)   |           Checksum            |</span><br><span class="line">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br><span class="line">|           Identifier          |        Sequence Number        |</span><br><span class="line">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br><span class="line">|     Data (Optional, usually timestamp or alpha-numeric)       |</span><br><span class="line">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>Identifier</strong>: 用於區分並行ping任務，常爲ping進程pid</li>
+<li><strong>Seq Num</strong>: 序列號，每傳送一個包自增1，用於檢測丟包和亂序</li>
+</ul>
+<h4 id="差錯報告報文結構"><a href="#差錯報告報文結構" class="headerlink" title="差錯報告報文結構"></a>差錯報告報文結構</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> 0                   1                   2                   3</span><br><span class="line"> 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1</span><br><span class="line">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br><span class="line">|    Type (3)   |  Code (0-15)  |           Checksum            |</span><br><span class="line">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br><span class="line">|                        Rest of Header                         |</span><br><span class="line">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br><span class="line">|                       Original Packet                         |</span><br><span class="line">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br></pre></td></tr></table></figure>
+
+<p><strong><em>Rest of Header</em></strong><br>對於Type 3 Code 4，應包含Next-Hop MTU；<br>對於Type 5，應包含Gateway Address；<br>對於其他Type 3代碼，Rest of Header不使用且必須爲0</p>
+<p><strong><em>data payload特殊性</em></strong><br>在RFC 792的原始定義中，Data Payload要求包含IP Header + 原始數據的前64 bits<br>&emsp;這是因爲數據包的前8 Bytes足以包含TCP&#x2F;UDP頭的src port&#x2F;dst port訊息，足以src host追溯引發問題的程式<br>在RFC 1812的現代實踐中，Data Payload要求儘可能包含原始數據包的內容，但是總長度不應超過576 Bytes (Minimum Reassembly Buffer Size)，以避免分片，確保錯誤報告能被任意接收端處理</p>
+<h2 id="ICMPv6"><a href="#ICMPv6" class="headerlink" title="ICMPv6"></a>ICMPv6</h2><p>IPv4和IPv6的ICMP雖然名字相似，但地位完全不同，<strong>ICMPv4是輔助，ICMPv6是核心架構</strong>，ICMPv6合併了IPv4的ICMP,ARP,IGMP，甚至接管了部分DHCP的功能<br>你最好不要將二者混爲一談</p>
+<h3 id="報文結構-1"><a href="#報文結構-1" class="headerlink" title="報文結構"></a>報文結構</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> 0                   1                   2                   3</span><br><span class="line"> 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1</span><br><span class="line">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br><span class="line">|     Type      |     Code      |           Checksum            |</span><br><span class="line">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br><span class="line">|                                                               |</span><br><span class="line">+                         Message Body                          +</span><br><span class="line">|                                                               |</span><br><span class="line">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br></pre></td></tr></table></figure>
+
+<p>看上去和ICMPv4相同？確實，前4 Bytes的格式是相同的<br>但是需要注意的是，ICMPv6的checksum計算時包含IPv6 Pseudo-Header（會在下一小節中講到）</p>
+<p>因爲在IPv6中ICMPv6 (RFC 4443) 是一個極其龐大的協定簇，合併了IPv4中的ICMPv4, ARP, IGMP的功能，故Message Body在ICMPv6中的形式會更多變<br>在這篇文章當中沒有辦法完整的闡述ICMPv6協定，只會例舉一些Common Packets</p>
+<h4 id="ICMPv6-報文校驗"><a href="#ICMPv6-報文校驗" class="headerlink" title="ICMPv6 報文校驗"></a>ICMPv6 報文校驗</h4><p>與ICMPv4不同，ICMPv6的校驗和計算強制包含IPv6 Pseudo-Header，包括：</p>
+<ul>
+<li>Source Address (128 bits)</li>
+<li>Destination Address (128 bits)</li>
+<li>Upper-Layer Packet Length (32 bits)</li>
+<li>Zero (24 bits)</li>
+<li>Next Header (8 bits, 值固定爲58)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">功能</th>
+<th align="center">IPv4</th>
+<th align="center">IPv6</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">地址解析</td>
+<td align="center">ARP</td>
+<td align="center">ICMPv6 NDP (Type 135&#x2F;136)</td>
+</tr>
+<tr>
+<td align="center">自動配置</td>
+<td align="center">DHCPv4</td>
+<td align="center">SLAAC (Type 133&#x2F;134) &amp; DHCPv6</td>
+</tr>
+<tr>
+<td align="center">重定向</td>
+<td align="center">ICMPv4 Type 5</td>
+<td align="center">ICMPv6 NDP Type 137</td>
+</tr>
+</tbody></table>
+<h4 id="TLV選項結構"><a href="#TLV選項結構" class="headerlink" title="TLV選項結構"></a>TLV選項結構</h4><p>Options字段是ICMPv6的強大之處所在<br>在NDP和RA中，報文會攜帶多個Option，每個字段都遵循以下原則</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> 0                   1                   2                   3</span><br><span class="line"> 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1</span><br><span class="line">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br><span class="line">|    Op. Type   |   Op. Length  |      Op. Data (Variable)      |</span><br><span class="line">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="center">字段</th>
+<th align="center">長度</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Type</td>
+<td align="center">8 bits</td>
+<td align="center">Option Type</td>
+</tr>
+<tr>
+<td align="center">Length</td>
+<td align="center">8 bits</td>
+<td align="center">Option Length (Length value &#x3D; 1, Total Option Length &#x3D; 8 Bytes (Type + Length + Value + Padding))</td>
+</tr>
+<tr>
+<td align="center">Value</td>
+<td align="center">Variable</td>
+<td align="center">實際內容</td>
+</tr>
+</tbody></table>
+<h4 id="ICMPv6-Packet-Too-Big-Type-2-報文結構"><a href="#ICMPv6-Packet-Too-Big-Type-2-報文結構" class="headerlink" title="ICMPv6 Packet Too Big, Type 2 報文結構"></a>ICMPv6 Packet Too Big, Type 2 報文結構</h4><p>ICMPv6 Packet Too Big是IPv6路徑MTU發現的核心<br>IPv6強制要求端到端分片。若路由器發現包體超過出路徑MTU，唯一的處理方式是丟棄並返回Type 2報文，src host再根據收到的Type 2報文重新分片數據包並傳送</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> 0                   1                   2                   3</span><br><span class="line"> 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1</span><br><span class="line">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br><span class="line">|     Type (2)  |     Code (0)  |           Checksum            |</span><br><span class="line">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br><span class="line">|                             MTU                               |</span><br><span class="line">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br><span class="line">|                        Invoking Packet                        |</span><br><span class="line">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>MTU (32 bits)</strong>: 明確告知src host Next-Hop MTU</li>
+<li><strong>Invoking Packet</strong>: 根據RFC 4443，應盡可能多地包含原始數據包，直到ICMPv6報文本身達到IPv6的最小MTU (1280 Octets)，以確保錯誤報告能被任意接收端處理</li>
+</ul>
+<h4 id="ICMPv6-Neighbor-Solicitation-Type-135-136-報文結構"><a href="#ICMPv6-Neighbor-Solicitation-Type-135-136-報文結構" class="headerlink" title="ICMPv6 Neighbor Solicitation, Type 135&#x2F;136 報文結構"></a>ICMPv6 Neighbor Solicitation, Type 135&#x2F;136 報文結構</h4><p>ICMPv6 Neighbor Solicitation的功能等同於ARP，但使用Multicast而非Broadcast，大幅減少對鏈路層無關節點的干擾</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"> 0                   1                   2                   3</span><br><span class="line"> 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1</span><br><span class="line">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br><span class="line">|    Type (135) |     Code (0)  |           Checksum            |</span><br><span class="line">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br><span class="line">|                         Reserved (0)                          |</span><br><span class="line">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br><span class="line">|                                                               |</span><br><span class="line">+                                                               +</span><br><span class="line">|                                                               |</span><br><span class="line">+                   Target Address (128 bits)                   +</span><br><span class="line">|                                                               |</span><br><span class="line">+                                                               +</span><br><span class="line">|                                                               |</span><br><span class="line">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br><span class="line">|    Op. Type   |   Op. Length  |      Op. Data (Variable)      |</span><br><span class="line">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br></pre></td></tr></table></figure>
+
+<p>注意:<br>&emsp;Reserved欄位必須發送爲0，接收方必須忽略，這是協議擴展性的預留<br>&emsp;NS報文中的Target addr不得爲Multicast addr<br>&emsp;上方報文結構主要展示的是Type 135, 對於Type 136, Reserved被替換爲Router, Solicited, Override標誌位，佔29 bits，需要通過其標誌位來更新鄰居緩存狀態</p>
+<h3 id="IPv4-v-s-IPv6-爲什麼ICMPv6很重要？"><a href="#IPv4-v-s-IPv6-爲什麼ICMPv6很重要？" class="headerlink" title="IPv4 v.s. IPv6: 爲什麼ICMPv6很重要？"></a>IPv4 v.s. IPv6: 爲什麼ICMPv6很重要？</h3><p>爲了解決IPv4協定簇碎片化的問題，IPv6將ARP, IGMP等協定全部併入IPv6，通過Type+Code+Checksum+Options的結構，將鏈路層尋址、組播管理、自動配置全部歸入同一個協定內<br>e.g.:</p>
+<table>
+<thead>
+<tr>
+<th align="center">功能</th>
+<th align="center">IPv4</th>
+<th align="center">IPv6</th>
+<th align="center">變化</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">L2地址解析</td>
+<td align="center">ARP</td>
+<td align="center">IPv6 NDP, ICMPv6 Type 135&#x2F;136 based</td>
+<td align="center">從Broadcast到Multicast，減少網路噪音<br>整合進L3協定便於管理</td>
+</tr>
+<tr>
+<td align="center">組播成員管理</td>
+<td align="center">IGMP</td>
+<td align="center">IPv6 MLD, ICMPv6 Type 130-132 based</td>
+<td align="center">協議棧簡化，直接復用ICMPv6</td>
+</tr>
+<tr>
+<td align="center">路徑MTU</td>
+<td align="center">Router分片<br>ICMPv4 Destination Unreachable: Fragmentation Needed and DF Set, Type 3 Code 4通告</td>
+<td align="center">Router禁止分片<br>ICMPv6 Packet Too Big, Type 2告知src host路徑MTU<br>src host分片</td>
+<td align="center">Router去除繁重的分片任務，推動End2End原則</td>
+</tr>
+<tr>
+<td align="center">位址自動配置</td>
+<td align="center">DHCP</td>
+<td align="center">IPv6 SLAAC, ICMPv6 Type 133&#x2F;134 based</td>
+<td align="center">實現「即插即用」，由Router直接下發前綴</td>
+</tr>
+</tbody></table>
+<p>在解析ICMPv6的時候，需要特別注意以下三點:</p>
+<ol>
+<li><strong>分片限制</strong>:<br>ICMPv6 <strong>Error Messages</strong>報文<strong>不允許</strong>分片，若報文超過MTU（通常受限於IPv6最小MTU 1280 Bytes），路由器必須對Message Body中的原始數據包進行截斷，確保整個ICMPv6報文能放入單個IPv6幀中發送<br>ICMPv6 <strong>Informational Messages</strong>報文<strong>不推薦</strong>分片，但是在Node Information Response、超大Payload的Echo Reply等特殊極端場景下允許分片</li>
+<li><strong>SEND (SEcure Neighbor Discovery)</strong> &amp; <strong>RA Guard</strong>:<br>因爲IPv6 NDP替代了ARP協定，故對ICMPv6協定本身產生了安全性需求<br>RFC 3971爲ICMPv6引入了SEND，在Options中引入了加密簽章<br>在Switch層面，必須配置RA Guard (Router Advertisement Guard)，防止惡意主機僞裝成Router發送RA報文，篡改網路前綴或Gateway</li>
+<li><strong>Multicast依存</strong>:<br>ICMPv6中的很多功能依賴於被請求節點多播位址 (Solicited-Node Multicast Address)<br>這意味着在Switch層面，MLD Snooping的配置對於ICMPv6的正常工作至關重要，如果MLD Snooping配置錯誤可能會導致NDP解析失敗，表現爲路由表正確但是無法ping通的詭異現象</li>
+</ol>
+<h3 id="報文類型規劃"><a href="#報文類型規劃" class="headerlink" title="報文類型規劃"></a>報文類型規劃</h3><p>ICMPv6重新規劃了Type值的範圍，使其更具有邏輯性<br>Type 0-127爲差錯，Type 128-255爲訊息<br>部分ICMPv4中的Destination Unreachable, Type 3子類被獨立爲新的Type<br>&emsp;e.g.<br>&emsp;&emsp;ICMPv4 Destination Unreachable (Fragmentation Needed and DF set), Type 3 Code 4<br>&emsp;&emsp;&emsp;↓↓↓<br>&emsp;&emsp;ICMPv6 Packet Too Big, Type 2</p>
+
+        
+      </div>
+
+         
+    </div>
+    
+     
+  </div>
+  
+    
+<nav id="article-nav">
+  <a class="article-nav-btn left  disabled "
+     >
+    <i class="fa-solid fa-angle-left"></i>
+    <p class="title-text">
+        
+    </p>
+  </a>
+  <a class="article-nav-btn right "
+    
+      href="/2025/12/27/the-end-of-2025/"
+      title="The end of 2025"
+     >
+
+    <p class="title-text">
+      
+        The end of 2025
+        
+    </p>
+    <i class="fa-solid fa-angle-right"></i>
+  </a>
+</nav>
+
+
+  
+</article>
+
+
+
+
+
+
+    </div>
+    <div id="footer-wrapper">
+      <footer id="footer">
+  
+  <div id="footer-info" class="inner">
+    
+    &copy; 2026 ZhaoymOvO<br>
+    Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & Theme <a target="_blank" rel="noopener" href="https://github.com/saicaca/hexo-theme-vivia">Vivia</a>
+  </div>
+</footer>
+
+    </div>
+    <div class="back-to-top-wrapper">
+    <button id="back-to-top-btn" class="back-to-top-btn hide" onclick="topFunction()">
+        <i class="fa-solid fa-angle-up"></i>
+    </button>
+</div>
+
+<script>
+    function topFunction() {
+        window.scroll({ top: 0, behavior: 'smooth' });
+    }
+    let btn = document.getElementById('back-to-top-btn');
+    function scrollFunction() {
+        if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+            btn.classList.remove('hide')
+        } else {
+            btn.classList.add('hide')
+        }
+    }
+    window.onscroll = function() {
+        scrollFunction();
+    }
+</script>
+
+  </div>
+  <script src="/js/light-dark-switch.js"></script>
+</body>
+</html>
