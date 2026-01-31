@@ -28,7 +28,7 @@
 <meta property="og:description" content="ICMPv4ICMPv4 是 IPv4 協議簇中負責傳遞控制訊息和錯誤報告的核心機制。雖然它封裝在 IP 報文中，但它被視為 Network Layer 的一部分。 報文結構123456789 0                   1                   2                   3 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0">
 <meta property="og:locale">
 <meta property="article:published_time" content="2026-01-31T12:39:45.000Z">
-<meta property="article:modified_time" content="2026-01-31T19:27:35.472Z">
+<meta property="article:modified_time" content="2026-01-31T19:42:15.498Z">
 <meta property="article:author" content="ZhaoymOvO">
 <meta property="article:tag" content="Network">
 <meta property="article:tag" content="IPv6">
@@ -143,7 +143,7 @@
 
   <div class="widget-wrap">
     <div class="widget">
-      <h3 class="widget-title">分类</h3>
+      <h3 class="widget-title">Categories</h3>
       <div class="category-box">
             <a class="category-link" href="/categories/Thoughts/">
                 Thoughts
@@ -163,7 +163,7 @@
       
   <div class="widget-wrap">
     <div class="widget">
-      <h3 class="widget-title">标签</h3>
+      <h3 class="widget-title">Tags</h3>
       <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Desktop/" rel="tag">Desktop</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/GUI/" rel="tag">GUI</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/IPv6/" rel="tag">IPv6</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Network/" rel="tag">Network</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Thoughts/" rel="tag">Thoughts</a></li></ul>
     </div>
   </div>
@@ -209,7 +209,7 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            6.9k 词 
+            6.7k words 
           </div>
         </div>
         
@@ -282,30 +282,6 @@
 <li>Zero (24 bits)</li>
 <li>Next Header (8 bits, 值固定爲58)</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th align="center">功能</th>
-<th align="center">IPv4</th>
-<th align="center">IPv6</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">地址解析</td>
-<td align="center">ARP</td>
-<td align="center">ICMPv6 NDP (Type 135&#x2F;136)</td>
-</tr>
-<tr>
-<td align="center">自動配置</td>
-<td align="center">DHCPv4</td>
-<td align="center">SLAAC (Type 133&#x2F;134) &amp; DHCPv6</td>
-</tr>
-<tr>
-<td align="center">重定向</td>
-<td align="center">ICMPv4 Type 5</td>
-<td align="center">ICMPv6 NDP Type 137</td>
-</tr>
-</tbody></table>
 <h4 id="TLV選項結構"><a href="#TLV選項結構" class="headerlink" title="TLV選項結構"></a>TLV選項結構</h4><p>Options字段是ICMPv6的強大之處所在<br>在NDP和RA中，報文會攜帶多個Option，每個字段都遵循以下原則</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> 0                   1                   2                   3</span><br><span class="line"> 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1</span><br><span class="line">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br><span class="line">|    Op. Type   |   Op. Length  |      Op. Data (Variable)      |</span><br><span class="line">+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</span><br></pre></td></tr></table></figure>
 
