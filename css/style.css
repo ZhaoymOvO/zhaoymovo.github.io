@@ -291,6 +291,48 @@ a {
   text-decoration: none;
 }
 @font-face {
+  font-family: 'MiLan Pro VF';
+  font-style: normal;
+  font-weight: 150 700;
+  font-display: swap;
+  src: url("fonts/MiLan Pro VF-wghtFix.ttf") format('truetype-variations');
+}
+@font-face {
+  font-family: 'NotoSerif CJK TC VF';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("fonts/NotoSerifCJKtc-VF.ttf") format('truetype-variations');
+}
+@font-face {
+  font-family: 'Caskaydia';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/CaskaydiaCoveNerdFont-Regular.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Caskaydia';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/CaskaydiaCoveNerdFont-Italic.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Caskaydia';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/CaskaydiaCoveNerdFont-Bold.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Caskaydia';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/CaskaydiaCoveNerdFont-BoldItalic.ttf") format('truetype');
+}
+@font-face {
   font-family: Roboto;
   font-style: normal;
   font-weight: 400;
@@ -308,7 +350,7 @@ body,
   height: 100%;
 }
 body {
-  font: 16px "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font: 16px "MiLan Pro VF", "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-text-size-adjust: 100%;
   background: var(--page-background);
   background-size: 240px;
@@ -1398,7 +1440,7 @@ a.article-title:active {
 .article-entry footer {
   font-size: 16px;
   margin: 1.6em 0;
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "MiLan Pro VF", "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   text-align: right;
 }
 .article-entry footer cite:before {
@@ -2369,7 +2411,7 @@ a.article-title:active {
 }
 .article-entry pre,
 .article-entry code {
-  font-family: "JetBrains Mono", "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
+  font-family: "Caskaydia", "JetBrains Mono", "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
 }
 .article-entry code {
   background: var(--article-code-bg);
@@ -2432,7 +2474,7 @@ a.article-title:active {
 }
 .article-entry .gist .gist-file {
   border: none;
-  font-family: "JetBrains Mono", "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
+  font-family: "Caskaydia", "JetBrains Mono", "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
   margin: 0;
   padding: 12px;
 }
@@ -2456,7 +2498,7 @@ a.article-title:active {
 .article-entry .gist .gist-file .gist-meta {
   color: #999;
   background: var(--dark-L20);
-  font: 0.85em "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font: 0.85em "MiLan Pro VF", "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   text-shadow: 0 0;
   padding: 0;
   margin-top: 8px;
