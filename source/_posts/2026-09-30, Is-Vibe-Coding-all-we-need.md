@@ -19,17 +19,20 @@ tags:
     background-color: #f931;
     text-align: center;
   }
-  .warnTitle {
+  .warnTitle,.noticeTitle {
     font-weight: bold;
     font-size: larger;
     margin-bottom: 8px;
   }
 
-  .info {
+  .notice {
+    margin: 12px auto;
     border: 1px solid #888;
-    border-radius: 8px;
-    padding: 8px 16px;
-    margin-top: 16px;
+    border-radius: 12px;
+    padding: 12px 80px;
+    width: fit-content;
+    max-width: 100%;
+    text-align: center;
     background-color: #44a1;
   }
 </style>
@@ -44,11 +47,11 @@ tags:
   </div>
 </div>
 
-<div class="info">
-  <div class="infoTitle">
+<div class="notice">
+  <div class="noticeTitle">
     這篇文章被修正過！
   </div>
-  <div class="infoContent">
+  <div class="noticeContent">
     如果你在 2026-10-01 之前看到這篇文章，你看到的是未修正版本。<br>
     我想可能可以重新讀一遍？我修復了一點邏輯問題。<br>
     主要是最後幾段啦。
