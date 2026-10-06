@@ -27,11 +27,14 @@ hue:
 # Personal info
 avatar: image/avater.jpg # Path to the avatar image relative to /source
 author: ZhaoymOvO
-subtitle: "“Narcissus„"
+subtitle: "愛、そして自由"
 links:
   - name: GitHub
     icon: fa-brands fa-github-alt
     url: https://github.com/ZhaoymOvO
+  - name: E-Mail
+    icon: fa-solid fa-inbox
+    url: zhaoym233@hotmail.com
 
 # Sidebar
 sidebar:

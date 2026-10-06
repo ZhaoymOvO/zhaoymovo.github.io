@@ -15,3 +15,12 @@ date: 1970-01-01 00:00:00
 
 我是個普通人，大概是我最大的優點。  
 畢竟世界上最多的，還是普通人。
+
+---
+
+<p style="text-align: center; color: #888;">
+本站使用的 Vivia 主題有經過我的客製化。<br>
+<a href="https://github.com/saicaca/hexo-theme-vivia">原主題</a>使用 <a href="https://raw.githubusercontent.com/saicaca/hexo-theme-vivia/refs/heads/main/LICENSE">MIT License</a> 授權，<br>
+客製化後的主題使用 <a href="https://raw.githubusercontent.com/ZhaoymOvO/zhaoymovo.github.io/refs/heads/master/LICENSE">MPL 2.0</a> 授權。<br>
+客製化後的主題不做單獨發表。
+</p>

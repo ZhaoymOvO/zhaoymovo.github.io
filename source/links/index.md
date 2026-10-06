@@ -37,7 +37,12 @@ date: 1970-01-01 00:00:00
 <div class="Valhalla">
 <div class="card">
     <div class="name">ZhaoymOvO</div>
-    <div class="signature">“Narcissus„</div>
+    <div class="signature">愛、そして自由</div>
     <a href="http://github.com/ZhaoymOvO"><img src="https://avatars.githubusercontent.com/u/109097598?v=4" alt="GitHub" class="avatar"></a>
+</div>
+<div class="card" id="mailset">
+    <div class="name">mail_set</div>
+    <div class="signature">A student who is very lazy</div>
+    <a href="https://www.mailset.top/"><img src="https://www.mailset.top/img/favicon.png" alt="Mailset" class="avatar"></a>
 </div>
 </div>
