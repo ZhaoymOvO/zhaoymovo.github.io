@@ -17,7 +17,7 @@ banner:
   enable: false # Display banner
   url: image/129316528_p1_wp_kai.png # Path to the banner image relative to /source. Web url is also supported
   position: center # Specifies the alignment of the image, see the "object-position" property in CSS
-  onAllPages: true # Display banner on all pages instead of only the home page
+  onAllPages: false # Display banner on all pages instead of only the home page
 
 # Appearance
 hue:
@@ -34,7 +34,7 @@ links:
     url: https://github.com/ZhaoymOvO
   - name: E-Mail
     icon: fa-solid fa-inbox
-    url: zhaoym233@hotmail.com
+    url: mailto:zhaoym233@hotmail.com
 
 # Sidebar
 sidebar:
